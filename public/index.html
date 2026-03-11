@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LLM Zwift Workout Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>LLM-Powered Zwift Workout Generator</h1>
+      <p class="subtitle">Describe your workout and generate a Zwift-compatible <code>.zwo</code> file.</p>
+
+      <form id="generator-form">
+        <label for="prompt">Workout description</label>
+        <textarea id="prompt" rows="3" placeholder="e.g. 30 min zone 2 or 40 min threshold workout" required></textarea>
+        <button type="submit">Generate Workout</button>
+      </form>
+
+      <section id="result" class="hidden">
+        <h2 id="workout-title"></h2>
+        <p id="workout-description"></p>
+        <div id="chart"></div>
+        <button id="download-btn" type="button">Download .zwo</button>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
